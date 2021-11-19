@@ -12,11 +12,15 @@ const mainVisualSlider = new Swiper("#mainVisual", {
 
 const productSlider = new Swiper("#product .list", {
   speed: 600,
-  slidesPerView: 3, //화면에 보여지는 갯수
-  slidesPerGroup: 3, //묶음
+  slidesPerView: 1, //화면에 보여지는 갯수
+  //slidesPerGroup: 3, //묶음
   navigation: {
     prevEl: "#product .prev",
     nextEl: "#product .next",
+  },
+  scrollbar: {
+    el: ".scroll",
+    draggable: true,
   },
 });
 
@@ -37,5 +41,5 @@ btnClose.addEventListener("click", () => {
   console.log("close");
   gnb.classList.remove("on");
 });
-`
+
 //f(x,y) = x+y*3; f(3,5) = 18
