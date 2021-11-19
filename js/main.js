@@ -24,6 +24,12 @@ const productSlider = new Swiper("#product .list", {
   },
 });
 
+const newsSlider = new Swiper("#news, contents", {
+  slidesPerView: "auto",
+  ceteredSlides: true,
+  spaceBetween: 20,
+});
+
 function add(a, b) {
   return a + b * 2 + 10;
 }

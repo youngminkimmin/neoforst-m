@@ -14,6 +14,7 @@
 
 .btns {
   display: flex;
+  padding: 0 20px;
   &.center {
     justify-content: center;
   }
@@ -32,7 +33,8 @@
     color: #fff;
   }
   .large {
-    height: 60px;
+    width: 100%;
+    height: 50px;
     padding: 0 50px;
   }
 }
@@ -183,16 +185,16 @@
   // product end
 
   #news {
-    padding: 100px 0;
+    padding: 50px 0 20px;
+    .titleBox {
+      text-align: center;
+    }
     .contents {
-      width: 1440px;
       margin: auto;
       .list {
-        display: flex;
-        justify-content: space-between;
         margin-top: 50px;
         li {
-          width: 31.33%;
+          width: 80%;
           a {
             display: block;
             position: relative;
@@ -226,18 +228,17 @@
               transition: 0.25s ease;
             }
             .txtBox {
-              position: absolute;
               background-color: #fff;
-              padding: 30px;
+              padding: 10px;
               left: 0;
-              bottom: 0;
+
               width: 100%;
-              transform: translateY(50px);
+              transform: translateY(0px);
               box-sizing: border-box;
               transition: 0.25s ease;
               h3 {
-                font-size: $h3;
-                @include multiEllipsis();
+                font-size: $medium-size;
+                @include multiEllipsis(1.2, 2);
                 margin-bottom: 30px;
               }
               .date {
@@ -258,17 +259,14 @@
   // new end
   #cs {
     .contents {
-      width: 1440px;
-      margin: auto;
       ul {
-        display: flex;
-        justify-content: space-between;
+        padding: 0 20px;
         li {
-          width: 49%;
           background-repeat: no-repeat;
           background-size: cover;
           overflow: hidden;
           border-radius: 10px;
+          margin: 10px 0;
           &:nth-child(1) {
             background-image: url("../images/main/bg_contact.jpg");
           }
@@ -276,18 +274,21 @@
             background-image: url("../images/main/bg_charge.jpg");
           }
           a {
-            height: 150px;
+            height: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 30px;
+            padding: 0 20px;
 
             .txtBox {
               color: $white-color;
               strong {
-                font-size: $large-size;
+                font-size: $medium-size;
                 display: block;
                 margin-bottom: 10px;
+              }
+              p {
+                font-size: $small-size;
               }
             }
             .btn {
@@ -296,7 +297,8 @@
               color: #fff;
               padding: 10px 20px;
               border-radius: 100px;
-              font-size: $normal-size;
+              font-size: $small-size;
+              font-size: 0;
               span {
                 color: $main-color;
                 margin-left: 10px;
